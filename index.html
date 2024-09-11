@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+    .container{
+        max-width: 1405px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    @font-face{
+        font-family: "Manrope-Medium";
+        src: url(fonts/MP/Manrope-Medium.ttf);
+    }
+    @font-face{
+        font-family: "Manrope-Bold";
+        src: url(fonts/MP/Manrope-Bold.ttf);
+    }
+    @font-face{
+        font-family: "Manrope-ExtraBold";
+        src: url(fonts/MP/Manrope-ExtraBold.ttf);
+    }
+    @font-face{
+        font-family: "BadScript-Regular";
+        src: url(fonts/bs/BadScript-Regular.ttf);
+    }
+    :root{
+        --MP500:"Manrope-Medium";
+        --MP700:"Manrope-Bold";
+        --MP800:"Manrope-ExtraBold";
+        --BS:"BadScript-Regular";
+    }
+    /* root end */
+    /* header start */
+    .header__nav-content{
+        padding: 15px 0 26px 0;
+    }
+    .header__nav-list{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header__nav-link{
+        font-family: var(--MP700);
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: 5%;
+        color: #27221D;
+        text-transform: uppercase ;
+        position: relative;
+        transition: .3s;
+    }
+    .header__nav-btn{
+        padding: 11px 13px;
+        font-family: var(--MP700);
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: 5%;
+        color: #fff;
+        background: #DBC8A0;
+        border: 2px solid #DBC8A0;
+        cursor: pointer;
+    }
+    .header__nav-link:hover{
+        color: #CCB688;
+
+    }
+    .header__nav-link:hover:before{
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    .header__nav-link::before{
+        content: "";
+        width: 100%;
+        height: 5px;
+        background: #CCB688;
+        position: absolute;
+        left: 0;
+        top: -56px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition:.3s;
+    }
+    .header__content{
+        height: 100vh;
+        display: flex;
+        background: url(images/bg.png) no-repeat center center /cover;
+    }
+    .header__content-content{
+        display: flex;
+        align-items: center;
+        gap: 126px;
+    }
+    .header__content-info{
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+    .header__content-title{
+        font-family: var(--MP700);
+        font-size: 70px;
+        line-height: 82px;
+        color: #27221D;
+        max-width: 520px;
+        width: 100%;
+        text-align: right;
+        margin-bottom: 43px;
+    }
+    .header__content-title strong{
+        color: #DBC8A0;
+    }
+    .header__content-text{
+        font-family: var(--MP800);
+        font-size: 18px;
+        line-height: 30px;
+        text-align: right;
+        max-width: 639px;
+        width: 100%;
+        color: rgba(0, 0, 0, 0.796);
+    }
+    .header__content-text strong{
+        color: black;
+    }
+    .header__content-btn{
+        display: flex;
+        align-items: center;
+        padding: 11px 19px;
+        border: 3px solid #DBC8A0;
+        cursor: pointer;
+        margin-top: 55px;
+    }
+    .header__content-btn span{
+        font-family: var(--MP800);
+        font-size: 14px;
+        line-height: 35px;
+        color: #27221D;
+    }
+    .header__content-image img{
+        max-width: 450px;
+    }
+    /* header end */
+</style>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__nav-content container">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        <a href="##" class="header__nav-link">ГЛАВНАЯ</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="##" class="header__nav-link">Обо мне</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="##" class="header__nav-link">услуги</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="##" class="header__nav-link">Стоимость</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="">
+                            <img src="images/navlogo.svg" alt="" class="header__nav-logo">
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="##" class="header__nav-link">Блог</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="##" class="header__nav-link">вопрос-ответ</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="##" class="header__nav-link">Контакты</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <button class="header__nav-btn">ЗАПИСАТЬСЯ</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="header__content">
+            <div class="header__content-content container" >
+            <div class="header__content-info">
+                <h1 class="header__content-title">Добро Пожаловать
+                    <strong>на терапию</strong> 
+                </h1>
+                <p class="header__content-text">Меня зовут <strong>Максим</strong>, Я помогаю людям и семьям справляться с жизненными трудностями, страхами и депрессиями и полностью раскрывать свой потенциал.</p>
+                <button class="header__content-btn">
+                    <img src="images/pencil.svg" alt="">
+                    <span>ЗАПИСАТЬСЯ НА СЕССИЮ</span>
+                </button>
+            </div>
+            <div class="header__content-image">
+                <img src="images/headercontent.png" alt="">
+            </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
